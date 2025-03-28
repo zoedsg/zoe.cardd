@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Card de Preço</title>
     <style>
-        /* Tela de fundo rosa com nuvens */
+        /* Fundo rosa */
         body {
             margin: 0;
             font-family: Arial, sans-serif;
@@ -15,14 +15,28 @@
             justify-content: center;
             align-items: center;
             overflow: hidden;
+            position: relative;
         }
 
+        /* Nuvens animadas */
         .clouds {
             position: absolute;
+            top: 0;
+            left: 0;
             width: 100%;
             height: 100%;
             background-image: url('https://www.transparenttextures.com/patterns/clouds.png');
             opacity: 0.3;
+            animation: moveClouds 20s linear infinite;
+        }
+
+        @keyframes moveClouds {
+            from {
+                background-position: 0 0;
+            }
+            to {
+                background-position: 1000px 500px;
+            }
         }
 
         /* Card de Preço */
@@ -35,7 +49,9 @@
             text-align: center;
             transform: scale(0);
             opacity: 0;
-            transition: opacity 1s ease-out, transform 1s ease-out;
+            transition: opacity 1.5s ease-out, transform 1.5s ease-out;
+            position: relative;
+            z-index: 10;
         }
 
         .pricing-card h3 {
@@ -100,11 +116,13 @@
 
     <script>
         // Espera 2 segundos antes de mostrar o card suavemente
-        setTimeout(() => {
-            let card = document.getElementById("card");
-            card.style.opacity = "1";
-            card.style.transform = "scale(1)";
-        }, 2000);
+        window.onload = function() {
+            setTimeout(() => {
+                let card = document.getElementById("card");
+                card.style.opacity = "1";
+                card.style.transform = "scale(1)";
+            }, 2000);
+        };
     </script>
 
 </body>
