@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Card de Preço</title>
     <style>
-        /* Fundo rosa */
+        /* Fundo da página */
         body {
             margin: 0;
             font-family: Arial, sans-serif;
@@ -15,14 +15,11 @@
             justify-content: center;
             align-items: center;
             overflow: hidden;
-            position: relative;
         }
 
-        /* Nuvens animadas */
+        /* Nuvens animadas no fundo */
         .clouds {
             position: absolute;
-            top: 0;
-            left: 0;
             width: 100%;
             height: 100%;
             background-image: url('https://www.transparenttextures.com/patterns/clouds.png');
@@ -95,23 +92,36 @@
         .pricing-card button:hover {
             background-color: #d94d8c;
         }
-
     </style>
 </head>
 <body>
 
     <div class="clouds"></div>
 
+    <!-- Card de Preços -->
     <div class="pricing-card" id="card">
-        <h3>Plano Premium</h3>
-        <p class="price">R$49,90/mês</p>
+        <h3>Planos e Serviços</h3>
+        <p class="price">R$1,00</p>
         <ul>
-            <li>✔ Acesso ilimitado</li>
-            <li>✔ Suporte 24/7</li>
-            <li>✔ Sem anúncios</li>
-            <li>✔ Conteúdo exclusivo</li>
+            <li>✔ Banner</li>
+            <li>✔ Story note</li>
+            <li>✔ Layout</li>
+            <li>✔ Icon</li>
+            <li>✔ Capa</li>
+            <li>✔ Outro: Entre em contato</li>
         </ul>
-        <button>Assinar agora</button>
+        <h3>Combo Empresa</h3>
+        <p class="price">R$4,00</p>
+        <ul>
+            <li>✔ Banner, Icon, Capa, Story Note, Layout</li>
+            <li>✔ 2 Member Reveals inclusos (acima de 2 são cobrados separadamente)</li>
+        </ul>
+        <h3>Combo Solista</h3>
+        <p class="price">R$3,00</p>
+        <ul>
+            <li>✔ Banner, Icon, Layout e Capa</li>
+        </ul>
+        <button>Saiba Mais</button>
     </div>
 
     <script>
@@ -127,3 +137,8 @@
 
 </body>
 </html>
+
+
+
+
+
